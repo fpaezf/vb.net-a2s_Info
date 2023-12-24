@@ -1,4 +1,4 @@
-#A2S_Info implementation in VB.NET
+# A2S_Info implementation in VB.NET
 
 
         'This is the A2S_Info packet in Hex: ÿÿÿÿTSource Engine Query\0
