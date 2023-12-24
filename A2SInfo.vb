@@ -14,8 +14,7 @@ Public Class A2SInfo
         Dim targetServer As New IPEndPoint(IPAddress.Parse("123.123.123.123"), 27015)
 
         'Declare UDPClient
-        Using client As New UdpClient
-
+        Using client As New UdpClient            
             'Timeout settings
             client.Client.ReceiveTimeout = 2000
             client.Client.SendTimeout = 2000
@@ -89,23 +88,21 @@ Public Class A2SInfo
 
             'Server version like 1.23.0.8
             Dim Version As String = ReadSteamString(reader)
-
-
         End Using
-
     End Sub
+    
 
     'Function to read null terminated strings with binary reader
     Public Shared Function ReadSteamString(ByVal reader As BinaryReader) As String
         Dim str As List(Of Byte) = New List(Of Byte)()
         Dim nextByte As Byte = reader.ReadByte()
-
         While nextByte <> 0
             str.Add(nextByte)
             nextByte = reader.ReadByte()
         End While
-
         Return Encoding.UTF8.GetString(str.ToArray())
     End Function
+
+    
 
 End Class
