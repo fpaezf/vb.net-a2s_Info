@@ -78,7 +78,7 @@
             '0 = Public, 1 = private
             Dim Visibility As String = reader.ReadByte()
 
-            '0 = Disabled - 1 = Enabled
+            '0 = Disabled, 1 = Enabled
             Dim VAC As String = reader.ReadByte()
 
             'Server version
