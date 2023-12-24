@@ -101,8 +101,6 @@ Public Class A2SInfo
             nextByte = reader.ReadByte()
         End While
         Return Encoding.UTF8.GetString(str.ToArray())
-    End Function
-
-    
+    End Function    
 
 End Class
